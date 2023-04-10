@@ -3,7 +3,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:posadmin/views/admin_views/admin_profile_view.dart';
+import 'package:posadmin/views/home_views/credit_customer_report_screen.dart';
+import 'package:posadmin/views/home_views/day_summary_report_screen.dart';
+import 'package:posadmin/views/home_views/payment_report_screen.dart';
 import 'package:posadmin/views/home_views/staff_service_report.dart';
+import 'package:posadmin/views/home_views/tips_report_screen.dart';
 import 'package:posadmin/views/login_views/login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -58,21 +62,26 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  Container(
-                    height: 135,
-                    width: 180,
-                    decoration: BoxDecoration(
-                      color:const Color(0xffED008C).withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children:const [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 15),
-                          child: Text("Payment Report",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: () {
+                      Get.to(const PaymentReportScreen());
+                    },
+                    child: Container(
+                      height: 135,
+                      width: 180,
+                      decoration: BoxDecoration(
+                        color:const Color(0xffED008C).withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children:const [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Text("Payment Report",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -80,38 +89,48 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 135,
-                    width: 180,
-                    decoration: BoxDecoration(
-                      color:const Color(0xffED008C).withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children:const [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 15),
-                          child: Text("Day Summary\nReport",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: (){
+                      Get.to(const DaySummaryReportScreen());
+                    },
+                    child: Container(
+                      height: 135,
+                      width: 180,
+                      decoration: BoxDecoration(
+                        color:const Color(0xffED008C).withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children:const [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Text("Day Summary\nReport",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Container(
-                    height: 135,
-                    width: 180,
-                    decoration: BoxDecoration(
-                      color:const Color(0xffED008C).withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children:const [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 15),
-                          child: Text("Tips Report",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: (){
+                      Get.to(const TipsReportScreen());
+                    },
+                    child: Container(
+                      height: 135,
+                      width: 180,
+                      decoration: BoxDecoration(
+                        color:const Color(0xffED008C).withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children:const [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Text("Tips Report",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -136,21 +155,26 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  Container(
-                    height: 135,
-                    width: 180,
-                    decoration: BoxDecoration(
-                      color:const Color(0xffED008C).withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children:const [
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 15),
-                          child: Text("Credit Customer\nReport",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
-                        ),
-                      ],
+                  InkWell(
+                    onTap: (){
+                      Get.to(const CreditCustomerReportscreen());
+                    },
+                    child: Container(
+                      height: 135,
+                      width: 180,
+                      decoration: BoxDecoration(
+                        color:const Color(0xffED008C).withOpacity(0.2),
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children:const [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 15),
+                            child: Text("Credit Customer\nReport",textAlign: TextAlign.center, style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
