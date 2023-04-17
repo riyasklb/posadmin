@@ -67,15 +67,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     authController.userLogin(
                         email: userName.text, password: password.text);
                   } else {
-                    Get.snackbar("Fill all the fields", "",
-                        colorText: Colors.white,
-                        backgroundColor: Colors.red,
-                        snackPosition: SnackPosition.BOTTOM);
+                    Get.rawSnackbar(
+                        message: "Please fill all the fields",
+                        backgroundColor: Colors.red);
                   }
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
                 },
                 child: Container(
                   height: 50,
